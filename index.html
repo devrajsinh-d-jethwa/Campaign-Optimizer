@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Campaign Optimizer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "index.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Campaign Optimizer</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Optimize Your Marketing Budget</h1>
+            <p>Get the most out of your advertising spend by maximizing reach within your budget.</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <!-- Card for Input Form -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Enter Your Campaign Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Budget Input -->
+                        <div class="form-group">
+                            <label for="budget">Marketing Budget (in $):</label>
+                            <input type="number" class="form-control" id="budget" placeholder="Enter your total budget" required>
+                        </div>
+                        <!-- Channels Table -->
+                        <h6>Advertising Channels</h6>
+                        <table id="channelsTable" class="table table-bordered table-sm mt-3">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Channel Name</th>
+                                    <th>Cost</th>
+                                    <th>Reach</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <!-- Buttons -->
+                        <button onclick="addChannel()" class="btn btn-info btn-sm">Add Channel</button>
+                        <button onclick="calculateOptimalSelection()" class="btn btn-primary btn-block mt-4">Calculate Optimal Selection</button>
+                    </div>
+                </div>
+
+                <!-- Result Card -->
+                <div class="card mt-4">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">Optimization Result</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre id="result">No results yet. Please enter campaign details and calculate.</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <p>&copy; 2024 Campaign Optimizer. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src = "logic.js">
+        // Function to dynamically add new channel row with remove button
+        
+    </script>
+</body>
+</html>
